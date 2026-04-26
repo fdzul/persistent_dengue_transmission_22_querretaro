@@ -8,7 +8,8 @@ mp_heatmap <- function(geocoded_dataset,
     
     # Step 2. extract the locality ####
     loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                     locality = locality)
+                                     locality = locality) |>
+        dplyr::select(-NOMGEO)
     
     # Step 3. extract the geocoded cases of merida ####
     z <- z[loc, ]  |>
@@ -26,10 +27,10 @@ mp_heatmap <- function(geocoded_dataset,
         mapgl::add_source("area",  data = loc) |>
         mapgl::add_source("casos", data = z) |>
         # Límites de la ciudad
-        add_fill_layer(id           = "ciudad-fill",
-                       source       = "area",
-                       fill_color   = "transparent",
-                       fill_opacity = 0) |>
+        mapgl::add_fill_layer(id           = "ciudad-fill",
+                              source       = "area",
+                              fill_color   = "transparent",
+                              fill_opacity = 0) |>
         mapgl::add_line_layer(id             = "ciudad-borde",
                               source         = "area",
                               line_color     = "#444444",

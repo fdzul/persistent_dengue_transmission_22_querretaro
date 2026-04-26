@@ -27,7 +27,8 @@ mp_dengue_cases <- function(data,
                                            ordered = TRUE)) 
     # Step 2. extract the locality
     loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                     locality = locality)
+                                     locality = locality) |>
+        dplyr::select(-NOMGEO)
     
     # Step 3. extract the dengue cases in the locality
     data <- data[loc, ] 

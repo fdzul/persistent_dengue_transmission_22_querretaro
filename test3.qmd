@@ -1,5 +1,5 @@
 ---
-title: "Programa de Prevención y Control de Arbovirosis | 2056 | Victoria de Durango"
+title: "Programa de Prevención y Control de Arbovirosis | 2056 | Santiago de Querretaro"
 format: 
   dashboard:
     nav-buttons: [twitter, github, facebook]
@@ -7,11 +7,11 @@ format:
 theme: custom.scss
 ---
 
-# [**Cadenas de Transmisión**]{style="font-size:2pt"}
+# [**Hotspots**]{style="font-size:2pt"}
 
 ::: panel-tabset
 
-### [**Victoria de Durango**]{style="color:#990000"}
+### [**Querretaro**]{style="color:#990000"}
 
 ```{=html}
 <style>
@@ -71,7 +71,7 @@ theme: custom.scss
 /* Asegura que los mapas tengan tamaño consistente */
 .grid-card .html-widget,
 .grid-card iframe {
-  width: 100% !important;
+  width: 220% !important;
   height: 400px !important;
   border-radius: 8px;
 }
@@ -82,7 +82,7 @@ theme: custom.scss
     grid-template-columns: 1fr;  /* Una columna en móvil */
     max-height: 70vh;
     gap: 15px;
-    padding: 10px;
+    padding: 22px;
   }
   .column-header {
     font-size: 1rem;
@@ -104,15 +104,15 @@ theme: custom.scss
 
 ```{r casos_2023_2025,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 mp_dengue_cases(data = xy,
                 yrs = c(2023:2025),
-                locality = "Victoria de Durango",
-                cve_edo = "10")
+                locality = "Santiago de Queretaro",
+                cve_edo = "22")
 ```
 :::
 
@@ -122,15 +122,15 @@ mp_dengue_cases(data = xy,
 2025
 ```{r casos_2025,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 mp_dengue_cases(data = xy,
                 yrs = c(2025),
-                locality = "Victoria de Durango",
-                cve_edo = "10")
+                locality = "Santiago de Queretaro",
+                cve_edo = "22")
 ```
 
 :::
@@ -140,15 +140,15 @@ mp_dengue_cases(data = xy,
 2024
 ```{r casos_2024,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 mp_dengue_cases(data = xy,
                 yrs = 2024,
-                locality = "Victoria de Durango",
-                cve_edo = "10")
+                locality = "SAntiago de Queretaro",
+                cve_edo = "22")
 ```
 
 :::
@@ -159,15 +159,15 @@ mp_dengue_cases(data = xy,
 2023
 ```{r echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 mp_dengue_cases(data = xy,
                 yrs = 2023,
-                locality = "Victoria de Durango",
-                cve_edo = "10")
+                locality = "Santiago de Queretaro",
+                cve_edo = "22")
 ```
 
 :::
@@ -177,19 +177,18 @@ mp_dengue_cases(data = xy,
 2016-2022
 ```{r echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 mp_dengue_cases(data = xy,
                 yrs = c(2016:2022),
-                locality = "Victoria de Durango",
-                cve_edo = "10")
+                locality = "Santiago de Queretaro",
+                cve_edo = "22")
 ```
 
 :::
-
 
 </div><!-- COLUMNA 2: Cadenas de Transmisión --><div class="columna"><div class="column-header"> 🔄 CADENAS DE TRANSMISIÓN DE DENGUE </div>
 
@@ -198,16 +197,16 @@ mp_dengue_cases(data = xy,
 2023-2025
 ```{r chains_2023_2025, echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 
 mp_transmission_chains(data = xy,
                        yrs = c(2023:2025),
-                       locality = "Victoria de Durango",
-                       cve_edo = "10")
+                       locality = "Santiago de Querretaro",
+                       cve_edo = "22")
 ```
 :::
 
@@ -217,16 +216,16 @@ mp_transmission_chains(data = xy,
 2025
 ```{r chains2025, echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 
 mp_transmission_chains(data = xy,
-                       yrs = c(2024,2025),
-                       locality = "Victoria de Durango",
-                       cve_edo = "10")
+                       yrs = 2025,
+                       locality = "Santiago de Querretaro",
+                       cve_edo = "22")
 ```
 
 :::
@@ -236,16 +235,16 @@ mp_transmission_chains(data = xy,
 2024
 ```{r chains_2024,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 
 mp_transmission_chains(data = xy,
                        yrs = 2024,
-                       locality = "Victoria de Durango",
-                       cve_edo = "10")
+                       locality = "Santiago de Querretaro",
+                       cve_edo = "22")
 ```
 
 :::
@@ -256,38 +255,39 @@ mp_transmission_chains(data = xy,
 2023-2024
 ```{r chains_2023,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 
 mp_transmission_chains(data = xy,
                        yrs = c(2023, 2024),
-                       locality = "Victoria de Durango",
-                       cve_edo = "10")
+                       locality = "Santiago de Querretaro",
+                       cve_edo = "22")
 ```
 
 :::
 
 <!-- MAPA 4 (Fila 2, col = 2 - Casos) -->
 ::: grid-card
-2016-2023
+2016-2022
 ```{r chains_2016_2022,echo=FALSE}
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_transmission_chains.R")
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_dengue_cases.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_transmission_chains.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_dengue_cases.R")
 library(mapgl)
 library(fishualize)
 library(sf)
 
 mp_transmission_chains(data = xy,
-                       yrs = c(2016:2024),
-                       locality = "Victoria de Durango",
-                       cve_edo = "10")
+                       yrs = c(2016:2022),
+                       locality = "Santiago de Querretaro",
+                       cve_edo = "22")
 ```
 
 :::
+
 
 </div><!-- COLUMNA 2: Cadenas de Transmisión --><div class="columna"><div class="column-header"> 🔄 MAPAS DE CALOR </div>
 
@@ -299,13 +299,13 @@ mp_transmission_chains(data = xy,
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
 
 # Step 2. load the function ####
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_heatmap.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_heatmap.R")
 library(sf)
 library(mapgl)
 mp_heatmap(geocoded_dataset = xy,
            yrs = c(2023:2025),
-           cve_edo = "10",
-           locality = "Victoria de Durango")
+           cve_edo = "22",
+           locality = "Santiago de Queretaro")
 ```
 :::
 
@@ -318,13 +318,13 @@ mp_heatmap(geocoded_dataset = xy,
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
 
 # Step 2. load the function ####
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_heatmap.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_heatmap.R")
 library(sf)
 library(mapgl)
 mp_heatmap(geocoded_dataset = xy,
            yrs = 2025,
-           cve_edo = "10",
-           locality = "Victoria de Durango")
+           cve_edo = "22",
+           locality = "Santiago de Querretaro")
 ```
 
 :::
@@ -337,13 +337,13 @@ mp_heatmap(geocoded_dataset = xy,
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
 
 # Step 2. load the function ####
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_heatmap.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_heatmap.R")
 library(sf)
 library(mapgl)
 mp_heatmap(geocoded_dataset = xy,
            yrs = 2024,
-           cve_edo = "10",
-           locality = "Victoria de Durango")
+           cve_edo = "22",
+           locality = "Santiago de Querretaro")
 ```
 
 :::
@@ -357,13 +357,13 @@ mp_heatmap(geocoded_dataset = xy,
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
 
 # Step 2. load the function ####
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_heatmap.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_heatmap.R")
 library(sf)
 library(mapgl)
 mp_heatmap(geocoded_dataset = xy,
            yrs = 2023,
-           cve_edo = "10",
-           locality = "Victoria de Durango")
+           cve_edo = "22",
+           locality = "Santiago de Querretaro")
 ```
 
 :::
@@ -376,13 +376,13 @@ mp_heatmap(geocoded_dataset = xy,
 load("~/Library/CloudStorage/Dropbox/hotspots_2025/8.RData/denmex_chains.RData")
 
 # Step 2. load the function ####
-source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_10_durango/mp_heatmap.R")
+source("~/Library/CloudStorage/Dropbox/r_developments/r_dashboards/netlify/1.2.persisten_dengue_transmission_2026/persistent_dengue_transmission_22_querretaro/mp_heatmap.R")
 library(sf)
 library(mapgl)
 mp_heatmap(geocoded_dataset = xy,
            yrs = c(2016:2022),
-           cve_edo = "10",
-           locality = "Victoria de Durango")
+           cve_edo = "22",
+           locality = "Santiago de Querretaro")
 ```
 :::
 

@@ -8,7 +8,8 @@ mp_transmission_chains <- function(data,
     
     #
     loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                     locality = locality)
+                                     locality = locality) |>
+        dplyr::select(-NOMGEO)
     data <- data[loc, ]
     
     knox_res <- denhotspots::knox(x = data,
