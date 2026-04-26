@@ -44,31 +44,36 @@ mp_dengue_cases <- function(data,
     data$week_num <- as.character(as.integer(data$week_factor))
     
     # map
-    maplibre(style  = carto_style("positron"),
-             bounds = st_bbox(loc)) |>
-        add_source("area", data = loc) |>
-        add_line_layer(id         = "ciudad-borde",
-                       source     = "area",
-                       line_color = "#444444",
-                       line_width = 1) |>
-        add_circle_layer(id     = "casos-puntos",
-                         source = data,
-                         circle_color = match_expr(column  = "week_num",
-                                                   values  = as.character(1:8),
-                                                   stops   = pal_colores),
-                         circle_stroke_color = "white",
-                         circle_stroke_width = 1,
-                         circle_radius       = 6,
-                         tooltip             = "week_factor") |>
-        add_categorical_legend(legend_title = "Semana  Epidemiológica",
-                               values       = c("1-10","11-20","21-25","26-30",
-                                                "31-35","36-40","41-45","46-53"),
-                               colors       = pal_colores,
-                               patch_shape  = "circle") |>
-        add_fullscreen_control(position = "top-left") |> 
-        add_navigation_control() |>
-        add_globe_control() |>
-        add_scale_control()
+    # map
+    c <- sf::st_centroid(loc) |>
+        sf::st_coordinates()
+    mapgl::maplibre(style  = carto_style("positron"),
+                    #bounds = st_bbox(loc)
+                    zoom = 10,
+                    center = c(c[1], c[2])) |>
+        mapgl::add_source("area", data = loc) |>
+        mapgl::add_line_layer(id         = "ciudad-borde",
+                              source     = "area",
+                              line_color = "#444444",
+                              line_width = 1) |>
+        mapgl::add_circle_layer(id     = "casos-puntos",
+                                source = data,
+                                circle_color = mapgl::match_expr(column  = "week_num",
+                                                                 values  = as.character(1:8),
+                                                                 stops   = pal_colores),
+                                circle_stroke_color = "white",
+                                circle_stroke_width = 1,
+                                circle_radius       = 6,
+                                tooltip             = "week_factor") |>
+        mapgl::add_categorical_legend(legend_title = "Semana  Epidemiológica",
+                                      values       = c("1-10","11-20","21-25","26-30",
+                                                       "31-35","36-40","41-45","46-53"),
+                                      colors       = pal_colores,
+                                      patch_shape  = "circle") |>
+        mapgl::add_fullscreen_control(position = "top-left") |> 
+        mapgl::add_navigation_control() |>
+        mapgl::add_globe_control() |>
+        mapgl::add_scale_control()
     
     
 }
