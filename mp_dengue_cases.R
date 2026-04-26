@@ -65,7 +65,7 @@ mp_dengue_cases <- function(data,
                                 circle_stroke_width = 1,
                                 circle_radius       = 6,
                                 tooltip             = "week_factor") |>
-        mapgl::add_categorical_legend(legend_title = "Semana  Epidemiológica",
+        mapgl::add_categorical_legend(legend_title = "Semana",
                                       values       = c("1-10","11-20","21-25","26-30",
                                                        "31-35","36-40","41-45","46-53"),
                                       colors       = pal_colores,
